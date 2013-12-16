@@ -10,6 +10,7 @@ all: $(OBJS)
 $(OBJS): %.so: %.c
 	$(LINK) $< -o $@
 install : 
+	mkdir -p ../../mod
 	cp $(OBJS) ../../mod/
 clean:
 	rm -f *.so;
